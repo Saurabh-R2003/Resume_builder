@@ -1,0 +1,314 @@
+/* Modern resume CSS styles */
+:root {
+    --primary-color: #2d3e50;
+    --secondary-color: #3498db;
+    --light-gray: #f5f5f5;
+    --text-color: #333;
+    --text-light: #777;
+    --border-color: #e0e0e0;
+    /* A4 dimensions in pixels (at 96 DPI) */
+    --a4-width: 794px;
+    --a4-height: 1123px; 
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #f0f3f7;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+  }
+  
+  .container {
+    width: var(--a4-width);
+    height: var(--a4-height);
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Header Section */
+  .header {
+    display: flex;
+    padding: 40px;
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  .profile-image-container {
+    margin-right: 30px;
+  }
+  
+  .profile-placeholder {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+  }
+  
+  .header-content {
+    flex: 1;
+  }
+  
+  h1 {
+    font-size: 32px;
+    margin-bottom: 5px;
+  }
+  
+  .designation {
+    font-size: 18px;
+    color: #a1c8e8;
+    margin-bottom: 15px;
+  }
+  
+  .summary {
+    margin-bottom: 20px;
+    line-height: 1.5;
+    font-size: 14px;
+  }
+  
+  .contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 14px;
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+  }
+  
+  .contact-item svg {
+    margin-right: 5px;
+  }
+  
+  /* Main Content */
+  .main-content {
+    display: flex;
+    padding: 20px;
+    flex: 1; /* Allow this to take up remaining space */
+  }
+  
+  .left-column {
+    flex: 1.6;
+    padding-right: 20px;
+  }
+  
+  .right-column {
+    flex: 1;
+    border-left: 1px solid var(--border-color);
+    padding-left: 20px;
+  }
+  
+  /* Section Styling */
+  .section {
+    margin-bottom: 25px;
+  }
+  
+  .section-title {
+    color: var(--primary-color);
+    font-size: 20px;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+  }
+  
+  /* Experience & Education Items */
+  .experience-item, .education-item, .project-item {
+    margin-bottom: 20px;
+  }
+  
+  .title-row, .subtitle-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  
+  .title {
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 16px;
+  }
+  
+  .subtitle {
+    font-style: italic;
+    color: var(--secondary-color);
+  }
+  
+  .description {
+    font-size: 14px;
+    color: var(--text-color);
+    margin-top: 5px;
+  }
+  
+  /* Projects Section */
+  .project-title {
+    margin-bottom: 5px;
+  }
+  
+  .project-link {
+    display: block;
+    font-size: 13px;
+    color: var(--secondary-color);
+    word-break: break-all;
+  }
+  
+  /* Skills Section */
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+  }
+  
+  .skill-tag {
+    background-color: var(--light-gray);
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  /* Achievements Section */
+  .achievements-list {
+    padding-left: 20px;
+  }
+  
+  .achievement-item {
+    margin-bottom: 8px;
+  }
+  
+  /* Empty sections styling */
+  .no-items {
+    color: var(--text-light);
+    font-style: italic;
+    font-size: 14px;
+    margin: 10px 0;
+    min-height: 50px; /* Ensure some minimum height */
+  }
+  
+  /* Download Section */
+  .download-section {
+    
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .download-button, .back-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .back-button {
+    background-color: var(--text-light);
+  }
+  
+  .download-button:hover {
+    background-color: #1a2530;
+  }
+  
+  .back-button:hover {
+    background-color: #555;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 840px) {
+    .container {
+      width: 100%;
+      height: auto;
+      min-height: var(--a4-height);
+    }
+    
+    .download-section {
+      width: 100%;
+    }
+  
+    .header {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    
+    .profile-image-container {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+    
+    .main-content {
+      flex-direction: column;
+    }
+    
+    .left-column {
+      padding-right: 0;
+    }
+    
+    .right-column {
+      border-left: none;
+      border-top: 1px solid var(--border-color);
+      padding-left: 0;
+      padding-top: 20px;
+      margin-top: 20px;
+    }
+    
+    .title-row, .subtitle-row {
+      flex-direction: column;
+    }
+    
+    .contact-info {
+      justify-content: center;
+    }
+  }
+  
+  /* Print-specific styles for PDF generation */
+  @media print {
+    body {
+      padding: 0;
+      background: white;
+    }
+    
+    .container {
+      box-shadow: none;
+      border-radius: 0;
+    }
+    
+    .download-section {
+      display: none;
+    }
+  }
